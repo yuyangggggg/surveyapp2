@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // establish some connection to a remote database
     }
 
 
+    @IBAction func startSurvey() {
+        let vc = storyboard?.instantiateViewController(identifier: "question") as! QuestionViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
 }
 

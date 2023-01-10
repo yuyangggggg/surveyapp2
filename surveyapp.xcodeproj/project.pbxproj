@@ -16,6 +16,7 @@
 		263E38342964BBAC00E9EAE3 /* surveyappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E38332964BBAC00E9EAE3 /* surveyappTests.swift */; };
 		263E383E2964BBAC00E9EAE3 /* surveyappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E383D2964BBAC00E9EAE3 /* surveyappUITests.swift */; };
 		263E38402964BBAC00E9EAE3 /* surveyappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E383F2964BBAC00E9EAE3 /* surveyappUITestsLaunchTests.swift */; };
+		263E384D2964BCE900E9EAE3 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E384C2964BCE900E9EAE3 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		263E38392964BBAC00E9EAE3 /* surveyappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = surveyappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263E383D2964BBAC00E9EAE3 /* surveyappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyappUITests.swift; sourceTree = "<group>"; };
 		263E383F2964BBAC00E9EAE3 /* surveyappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		263E384C2964BCE900E9EAE3 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				263E38252964BBAC00E9EAE3 /* Assets.xcassets */,
 				263E38272964BBAC00E9EAE3 /* LaunchScreen.storyboard */,
 				263E382A2964BBAC00E9EAE3 /* Info.plist */,
+				263E384C2964BCE900E9EAE3 /* QuestionViewController.swift */,
 			);
 			path = surveyapp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				263E38212964BBAA00E9EAE3 /* ViewController.swift in Sources */,
 				263E381D2964BBAA00E9EAE3 /* AppDelegate.swift in Sources */,
+				263E384D2964BCE900E9EAE3 /* QuestionViewController.swift in Sources */,
 				263E381F2964BBAA00E9EAE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
