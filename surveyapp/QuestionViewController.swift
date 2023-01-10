@@ -12,7 +12,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
 
     var allQuestions = [Question]()
     var currentQuestion: Question?
-    var localAnswers = [String]() // stores the answers locally before sending to remote database - index corresponds to question number
+    var localAnswers = [String]() // stores the answers locally before sending to remote database
     
     @IBOutlet var label: UILabel!
     @IBOutlet var table: UITableView!
@@ -36,7 +36,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    /* Saves the answer locally in an array*/
+    /* Saves the answer locally in an array of strings */
     private func saveAnswerLocally(answer: String, question: Question) {
         // saves the answer to a local variable
         localAnswers.append(answer)
@@ -67,7 +67,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     /* Uploads the survey answers onto the remote server. */
     private func uploadAnswers(answers: [String]) {
-        // upload local answers on the server
         var urlBuilder = URLComponents(string: "https://auspicious-alike-antimatter.glitch.me")
         urlBuilder?.path = "/survey"
         var surveyAnswersString = ""
@@ -87,7 +86,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // tableview functions
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentQuestion?.answers.count ?? 0
     }
@@ -116,7 +114,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
                 // end the survey
                 saveAnswerLocally(answer: answer, question: question)
                 // save the local answers to the remote database
-                uploadAnswers(answers: localAnswers) // this bit does not work
+                uploadAnswers(answers: localAnswers)
                 let alert = UIAlertController(title: "Survey completed", message: "Thank you for completing the survey. Your responses have been recorded :)", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
                 present(alert, animated: true)
